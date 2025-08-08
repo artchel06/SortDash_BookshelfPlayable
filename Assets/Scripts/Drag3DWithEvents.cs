@@ -1,6 +1,7 @@
 using DG.Tweening;
-using UnityEngine;
+using System.Text.RegularExpressions;
 using UnityEngine.EventSystems;
+using UnityEngine;
 
 public class Drag3DWithEvents : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler
 {
@@ -65,11 +66,14 @@ public class Drag3DWithEvents : MonoBehaviour, IPointerDownHandler, IPointerUpHa
             if (objectCollider) objectCollider.enabled = true;
         }
     }
-
     private bool TryPlaceInTray(Vector3 dropPoint, GameObject hitObject)
     {
+        string colorName = Regex.Replace(transform.gameObject.name, @"Group\d*", "");
+        if (hitObject.GetComponent<DropZone>().dropColor != colorName)
+        {
+            return false;
+        }
         bool placed = false;
-
         // Determine which tray to use
         GameObject trayToUse = hitObject;
         ChildWatcher watcher = trayToUse.GetComponent<ChildWatcher>();
@@ -80,72 +84,102 @@ public class Drag3DWithEvents : MonoBehaviour, IPointerDownHandler, IPointerUpHa
             Debug.Log(watcher.IsFull());
             trayToUse = GameManager.Instance.secondParent;
             watcher = trayToUse.GetComponent<ChildWatcher>();
-            if (watcher != null && watcher.IsFull())
+            /*if (watcher != null && watcher.IsFull())
             {
                 Debug.Log("Both trays are full!");
                 return false;
-            }
-        } else
+            }*/
+        }
+        else
         {
             Debug.Log("Watcher notfull");
             Debug.Log(trayToUse.name);
             Debug.Log(trayToUse.transform.childCount);
         }
-            // Loop through tray slots
-            for (int slotIndex = 0; slotIndex <= trayToUse.transform.childCount - transform.childCount; slotIndex++)
+        if (transform.childCount > 10 - GameManager.Instance.bookInTray)
+        {
+            
+            for (var i = 0; i < (10 - GameManager.Instance.bookInTray); i++)
             {
-                Debug.Log(slotIndex + "");
-                Debug.Log(trayToUse.transform.childCount - transform.childCount + "number");
-                bool allFree = true;
+                int targetIndex = (10 - GameManager.Instance.bookInTray) + i;
+                Debug.Log(targetIndex + "--------------------");
+                GameObject targetGO = trayToUse.transform.GetChild(targetIndex).gameObject;
 
-                // Check if all consecutive slots needed are free
-                for (int check = 0; check < transform.childCount; check++)
+                if (targetGO != null)
                 {
-                    Debug.Log(check + "inside check");
-                    ChildSlot checkSlot = trayToUse.transform.GetChild(slotIndex + check).GetComponent<ChildSlot>();
-                    if (checkSlot.isOccupied)
-                    {
-                        Debug.Log("Inside Occupied");
-                        allFree = false;
-                        break;
-                    }
+                    Transform child = transform.GetChild(i);
+                    float delay = i * staggerDelay;
+
+                    child.DOMove(targetGO.transform.position, returnDuration)
+                         .SetEase(Ease.OutExpo)
+                         .SetDelay(delay);
+
+                    child.DORotateQuaternion(targetGO.transform.rotation, 1f)
+                         .SetEase(Ease.OutExpo)
+                         .SetDelay(delay)
+                         .OnComplete(() =>
+                         {
+                             child.SetParent(targetGO.transform, true);
+                             this.transform.GetComponent<BoxCollider>().enabled = false;
+                         });
+                    targetGO.GetComponent<ChildSlot>().isOccupied = true;
                 }
-
-                if (!allFree)
-                {
-                    continue;
-                }
-                // Skip if any slot is occupied
-                    // Place books into slots with staggered animation
-                    for (int childIndex = 0; childIndex < transform.childCount; childIndex++)
-                    {
-                        int targetIndex = slotIndex + childIndex;
-                        GameObject targetGO = trayToUse.transform.GetChild(targetIndex).gameObject;
-
-                    if (targetGO != null)
-                    {
-                        Transform child = transform.GetChild(childIndex);
-                        float delay = childIndex * staggerDelay;
-
-                        child.DOMove(targetGO.transform.position, returnDuration)
-                             .SetEase(Ease.OutExpo)
-                             .SetDelay(delay);
-
-                        child.DORotateQuaternion(targetGO.transform.rotation, 1f)
-                             .SetEase(Ease.OutExpo)
-                             .SetDelay(delay)
-                             .OnComplete(() =>
-                             {
-                                 child.SetParent(targetGO.transform, true);
-                                 this.transform.GetComponent<BoxCollider>().enabled = false;
-                             });
-                        targetGO.GetComponent<ChildSlot>().isOccupied = true;
-                    } 
-                    }
-                    placed = true;
-                    Debug.Log("inside loop");
-                    break; // Done placing*/
+                GameManager.Instance.bookInTray++;
             }
+        }
+        // Loop through tray slots
+        for (int slotIndex = 0; slotIndex <= trayToUse.transform.childCount - transform.childCount; slotIndex++)
+        {
+            bool allFree = true;
+            // Check if all consecutive slots needed are free
+            for (int check = 0; check < transform.childCount; check++)
+            {
+                Debug.Log(check + "inside check");
+                ChildSlot checkSlot = trayToUse.transform.GetChild(slotIndex + check).GetComponent<ChildSlot>();
+                if (checkSlot.isOccupied)
+                {
+                    Debug.Log("Inside Occupied");
+                    allFree = false;
+                    break;
+                }
+            }
+
+            if (!allFree)
+            {
+                continue;
+            }
+            // Skip if any slot is occupied
+            // Place books into slots with staggered animation
+            for (int childIndex = 0; childIndex < transform.childCount; childIndex++)
+            {
+                int targetIndex = slotIndex + childIndex;
+                GameObject targetGO = trayToUse.transform.GetChild(targetIndex).gameObject;
+
+                if (targetGO != null)
+                {
+                    Transform child = transform.GetChild(childIndex);
+                    float delay = childIndex * staggerDelay;
+
+                    child.DOMove(targetGO.transform.position, returnDuration)
+                         .SetEase(Ease.OutExpo)
+                         .SetDelay(delay);
+
+                    child.DORotateQuaternion(targetGO.transform.rotation, 1f)
+                         .SetEase(Ease.OutExpo)
+                         .SetDelay(delay)
+                         .OnComplete(() =>
+                         {
+                             child.SetParent(targetGO.transform, true);
+                             this.transform.GetComponent<BoxCollider>().enabled = false;
+                         });
+                    targetGO.GetComponent<ChildSlot>().isOccupied = true;
+                }
+                GameManager.Instance.bookInTray++;
+            }
+            placed = true;
+            Debug.Log("inside loop");
+            break; // Done placing
+        }
         Debug.Log("end reach");
         return placed;
     }

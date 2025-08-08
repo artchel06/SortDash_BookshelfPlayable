@@ -22,7 +22,7 @@ public class BookInstantiate : MonoBehaviour
 
             if (!colorGroups.ContainsKey(color))
             {
-                int groupIndex = 1;
+                int groupIndex = 0;
                 string baseGroupName = char.ToUpper(color[0]) + color.Substring(1) + "Group";
                 string groupName1 = baseGroupName;
 
@@ -87,6 +87,7 @@ public class BookInstantiate : MonoBehaviour
             }
         }
     }
+
     private IEnumerator FitColliderToChildren(Transform group, BoxCollider box)
     {
         yield return null;

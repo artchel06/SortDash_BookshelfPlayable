@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
     public bool trayFull = false;
     public int delay = 1;
     public DropZone zone;
+    public int bookInTray;
+    public bool notFull;
 
     public enum GameState { MainMenu, Playing, Paused, GameOver }
     public GameState CurrentState { get; private set; }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DropZone : MonoBehaviour
 {
+    public string dropColor;
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;

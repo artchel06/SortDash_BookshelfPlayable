@@ -992,7 +992,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookInstantiate:
-  - {fileID: 6941232746415472246, guid: 43bdf06f04c162a41b00af5b0b41c179, type: 3}
+  - {fileID: 3864311804713459029, guid: 50da234457eb50347acb78b7019786d2, type: 3}
   - {fileID: 5346355161491203860, guid: 188cb868211f77f4e9e782704b16bc1a, type: 3}
   - {fileID: 5346355161491203860, guid: 188cb868211f77f4e9e782704b16bc1a, type: 3}
   offsetVector: {x: 0, y: 0, z: 0.0003}
@@ -1800,7 +1800,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookInstantiate:
-  - {fileID: 6941232746415472246, guid: 43bdf06f04c162a41b00af5b0b41c179, type: 3}
+  - {fileID: 3864311804713459029, guid: 50da234457eb50347acb78b7019786d2, type: 3}
   - {fileID: 5346355161491203860, guid: 188cb868211f77f4e9e782704b16bc1a, type: 3}
   - {fileID: 5346355161491203860, guid: 188cb868211f77f4e9e782704b16bc1a, type: 3}
   offsetVector: {x: 0, y: 0, z: 0.0003}
@@ -1969,7 +1969,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookInstantiate:
-  - {fileID: 6941232746415472246, guid: 43bdf06f04c162a41b00af5b0b41c179, type: 3}
+  - {fileID: 5346355161491203860, guid: 188cb868211f77f4e9e782704b16bc1a, type: 3}
   - {fileID: 5346355161491203860, guid: 188cb868211f77f4e9e782704b16bc1a, type: 3}
   - {fileID: 5346355161491203860, guid: 188cb868211f77f4e9e782704b16bc1a, type: 3}
   - {fileID: 3864311804713459029, guid: 50da234457eb50347acb78b7019786d2, type: 3}
@@ -2147,8 +2147,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookInstantiate:
-  - {fileID: 6941232746415472246, guid: 43bdf06f04c162a41b00af5b0b41c179, type: 3}
-  - {fileID: 5346355161491203860, guid: 188cb868211f77f4e9e782704b16bc1a, type: 3}
+  - {fileID: 3864311804713459029, guid: 50da234457eb50347acb78b7019786d2, type: 3}
+  - {fileID: 3864311804713459029, guid: 50da234457eb50347acb78b7019786d2, type: 3}
   - {fileID: 5346355161491203860, guid: 188cb868211f77f4e9e782704b16bc1a, type: 3}
   - {fileID: 5346355161491203860, guid: 188cb868211f77f4e9e782704b16bc1a, type: 3}
   - {fileID: 5346355161491203860, guid: 188cb868211f77f4e9e782704b16bc1a, type: 3}
@@ -4940,10 +4940,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookInstantiate:
-  - {fileID: 6941232746415472246, guid: 43bdf06f04c162a41b00af5b0b41c179, type: 3}
-  - {fileID: 6941232746415472246, guid: 43bdf06f04c162a41b00af5b0b41c179, type: 3}
-  - {fileID: 6941232746415472246, guid: 43bdf06f04c162a41b00af5b0b41c179, type: 3}
-  - {fileID: 6941232746415472246, guid: 43bdf06f04c162a41b00af5b0b41c179, type: 3}
+  - {fileID: 3864311804713459029, guid: 50da234457eb50347acb78b7019786d2, type: 3}
+  - {fileID: 3864311804713459029, guid: 50da234457eb50347acb78b7019786d2, type: 3}
+  - {fileID: 3864311804713459029, guid: 50da234457eb50347acb78b7019786d2, type: 3}
+  - {fileID: 3864311804713459029, guid: 50da234457eb50347acb78b7019786d2, type: 3}
   - {fileID: 6299427153223387801, guid: d8360c446e62d194bb2adec9e652f09f, type: 3}
   - {fileID: 6299427153223387801, guid: d8360c446e62d194bb2adec9e652f09f, type: 3}
   - {fileID: 6299427153223387801, guid: d8360c446e62d194bb2adec9e652f09f, type: 3}
@@ -5730,8 +5730,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookInstantiate:
-  - {fileID: 6941232746415472246, guid: 43bdf06f04c162a41b00af5b0b41c179, type: 3}
-  - {fileID: 5346355161491203860, guid: 188cb868211f77f4e9e782704b16bc1a, type: 3}
+  - {fileID: 3864311804713459029, guid: 50da234457eb50347acb78b7019786d2, type: 3}
+  - {fileID: 3864311804713459029, guid: 50da234457eb50347acb78b7019786d2, type: 3}
   - {fileID: 5346355161491203860, guid: 188cb868211f77f4e9e782704b16bc1a, type: 3}
   - {fileID: 5346355161491203860, guid: 188cb868211f77f4e9e782704b16bc1a, type: 3}
   - {fileID: 5346355161491203860, guid: 188cb868211f77f4e9e782704b16bc1a, type: 3}
@@ -5963,8 +5963,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookInstantiate:
-  - {fileID: 6941232746415472246, guid: 43bdf06f04c162a41b00af5b0b41c179, type: 3}
-  - {fileID: 5346355161491203860, guid: 188cb868211f77f4e9e782704b16bc1a, type: 3}
+  - {fileID: 3864311804713459029, guid: 50da234457eb50347acb78b7019786d2, type: 3}
+  - {fileID: 3864311804713459029, guid: 50da234457eb50347acb78b7019786d2, type: 3}
   - {fileID: 5346355161491203860, guid: 188cb868211f77f4e9e782704b16bc1a, type: 3}
   - {fileID: 5346355161491203860, guid: 188cb868211f77f4e9e782704b16bc1a, type: 3}
   - {fileID: 3737685192532671533, guid: ae8afeee2b2a5a0419366590e144b226, type: 3}
@@ -6245,7 +6245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookInstantiate:
-  - {fileID: 6941232746415472246, guid: 43bdf06f04c162a41b00af5b0b41c179, type: 3}
+  - {fileID: 3864311804713459029, guid: 50da234457eb50347acb78b7019786d2, type: 3}
   - {fileID: 6299427153223387801, guid: d8360c446e62d194bb2adec9e652f09f, type: 3}
   - {fileID: 6299427153223387801, guid: d8360c446e62d194bb2adec9e652f09f, type: 3}
   - {fileID: 6299427153223387801, guid: d8360c446e62d194bb2adec9e652f09f, type: 3}
@@ -7429,8 +7429,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookInstantiate:
-  - {fileID: 6941232746415472246, guid: 43bdf06f04c162a41b00af5b0b41c179, type: 3}
-  - {fileID: 3052190545980979919, guid: 60d9041b356222e44b71dd70cebbce96, type: 3}
+  - {fileID: 3864311804713459029, guid: 50da234457eb50347acb78b7019786d2, type: 3}
+  - {fileID: 3864311804713459029, guid: 50da234457eb50347acb78b7019786d2, type: 3}
   - {fileID: 3052190545980979919, guid: 60d9041b356222e44b71dd70cebbce96, type: 3}
   - {fileID: 3052190545980979919, guid: 60d9041b356222e44b71dd70cebbce96, type: 3}
   - {fileID: 3052190545980979919, guid: 60d9041b356222e44b71dd70cebbce96, type: 3}
@@ -8005,7 +8005,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookInstantiate:
-  - {fileID: 6941232746415472246, guid: 43bdf06f04c162a41b00af5b0b41c179, type: 3}
+  - {fileID: 3864311804713459029, guid: 50da234457eb50347acb78b7019786d2, type: 3}
   - {fileID: 5346355161491203860, guid: 188cb868211f77f4e9e782704b16bc1a, type: 3}
   - {fileID: 5346355161491203860, guid: 188cb868211f77f4e9e782704b16bc1a, type: 3}
   offsetVector: {x: 0, y: 0, z: 0.0003}
@@ -8393,7 +8393,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookInstantiate:
-  - {fileID: 6941232746415472246, guid: 43bdf06f04c162a41b00af5b0b41c179, type: 3}
+  - {fileID: 3864311804713459029, guid: 50da234457eb50347acb78b7019786d2, type: 3}
   - {fileID: 5346355161491203860, guid: 188cb868211f77f4e9e782704b16bc1a, type: 3}
   - {fileID: 5346355161491203860, guid: 188cb868211f77f4e9e782704b16bc1a, type: 3}
   - {fileID: 3737685192532671533, guid: ae8afeee2b2a5a0419366590e144b226, type: 3}
@@ -8883,7 +8883,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookInstantiate:
-  - {fileID: 6941232746415472246, guid: 43bdf06f04c162a41b00af5b0b41c179, type: 3}
+  - {fileID: 3864311804713459029, guid: 50da234457eb50347acb78b7019786d2, type: 3}
   - {fileID: 5346355161491203860, guid: 188cb868211f77f4e9e782704b16bc1a, type: 3}
   - {fileID: 5346355161491203860, guid: 188cb868211f77f4e9e782704b16bc1a, type: 3}
   - {fileID: 401026408515232475, guid: 4dbc09c4def14534d91420a8e291e095, type: 3}
@@ -9207,7 +9207,7 @@ GameObject:
   - component: {fileID: 7406331434402693730}
   m_Layer: 3
   m_Name: Cardholder.014
-  m_TagString: Untagged
+  m_TagString: Tray
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9428,7 +9428,7 @@ GameObject:
   - component: {fileID: 5517824480420857578}
   m_Layer: 3
   m_Name: Cardholder.015
-  m_TagString: Untagged
+  m_TagString: Tray
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9445,6 +9445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f9ca924dfd4d41a14a5114a8f9ca1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropColor: Red
 --- !u!65 &5517824480420857577
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9621,6 +9622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f9ca924dfd4d41a14a5114a8f9ca1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropColor: Yellow
 --- !u!65 &7406331434402693729
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9686,7 +9688,7 @@ GameObject:
   - component: {fileID: 8231870228156856122}
   m_Layer: 3
   m_Name: Cardholder.017
-  m_TagString: Untagged
+  m_TagString: Tray
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9711,6 +9713,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f9ca924dfd4d41a14a5114a8f9ca1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropColor: Green
 --- !u!65 &8231870228156856121
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9761,7 +9764,7 @@ GameObject:
   - component: {fileID: 8475872515877282403}
   m_Layer: 3
   m_Name: Cardholder.013
-  m_TagString: Untagged
+  m_TagString: Tray
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9782,7 +9785,7 @@ GameObject:
   - component: {fileID: 8388472242785397489}
   m_Layer: 3
   m_Name: Cardholder.016
-  m_TagString: Untagged
+  m_TagString: Tray
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9807,6 +9810,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f9ca924dfd4d41a14a5114a8f9ca1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropColor: Lilac
 --- !u!65 &8388472242785397488
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9861,6 +9865,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f9ca924dfd4d41a14a5114a8f9ca1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropColor: Biege
 --- !u!65 &8475872515877282402
 BoxCollider:
   m_ObjectHideFlags: 0
