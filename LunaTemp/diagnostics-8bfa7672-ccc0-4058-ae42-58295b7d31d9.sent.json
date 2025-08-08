@@ -1,0 +1,273 @@
+{
+    "BuildID": "8bfa7672-ccc0-4058-ae42-58295b7d31d9",
+    "Command": "project:build",
+    "ProjectID": "2989de0c27a2ffc41a9a9b35530e1f5f",
+    "ProjectStateHash": "1f537ac5086f946d4f5c8e7df5aa4ef055ce9a0dd915b2ad5ea33c49364c6940",
+    "StageCompletedAt": 3,
+    "EarliestFatalError": 0,
+    "StartTime": 1754461258000,
+    "EndTime": 1754461280787,
+    "PlaygroundUserID": 20450,
+    "OperatingSystem": "win32",
+    "UnityPackageID": null,
+    "TargetPlatform": "develop",
+    "UnityVersion": "2022.3.61f1",
+    "LunaVersion": "6.3.0",
+    "LogCount": 9,
+    "Logs": [
+        {
+            "LogID": "33962eed-ca71-48ee-9de5-6d3cd6135858",
+            "Order": 7,
+            "Timestamp": 1754461281039,
+            "Stage": 3,
+            "ErrorType": 1,
+            "ErrorCode": "LP3015",
+            "Description": "You are not the Game Ended API: LifeCycle.GameEnded",
+            "Details": [
+                "You are not using the Game Ended API: LifeCycle.GameEnded. Some ad networks require this call, please add the event to avoid the ad being rejected."
+            ],
+            "DescriptionValues": [
+                "LifeCycle",
+                "GameEnded"
+            ],
+            "DetailsValues": [
+                "LifeCycle",
+                "GameEnded"
+            ],
+            "LogCount": 1,
+            "LinePosition": null,
+            "FilePath": "",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 0
+        },
+        {
+            "LogID": "37c5f125-9144-48f1-a858-e5d2a65a34ac",
+            "Order": 7,
+            "Timestamp": 1754461281039,
+            "Stage": 3,
+            "ErrorType": 3,
+            "ErrorCode": "LP3007",
+            "Description": "You are not using any custom events",
+            "Details": [
+                "You are not using any custom events. It is recommended to use custom events to have a better understanding of the playable."
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": null,
+            "FilePath": "",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 0
+        },
+        {
+            "LogID": "162bb332-ce75-4146-a0b0-60ef1f8a0b90",
+            "Order": 7,
+            "Timestamp": 1754461281039,
+            "Stage": 3,
+            "ErrorType": 3,
+            "ErrorCode": "LP3011",
+            "Description": "You are not using any LunaPlaygroundFields attributes.",
+            "Details": [
+                "You are not using any LunaPlaygroundFields attributes, it allows you to configure your playable to different concepts to find the best variation, which can drastically improve playable performance on all ad networks."
+            ],
+            "DescriptionValues": null,
+            "DetailsValues": null,
+            "LogCount": 1,
+            "LinePosition": null,
+            "FilePath": "",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 0
+        },
+        {
+            "LogID": "fd8fd3a9-d17d-4cc7-9bdb-5e02c989e22b",
+            "Order": 0,
+            "Timestamp": 1754461261200,
+            "Stage": 1,
+            "ErrorType": 0,
+            "ErrorCode": "LP1006",
+            "Description": "Linear color space is not supported",
+            "Details": [
+                "Due to compatibility reasons, Luna is only able to use Gamma color space for rendering. Please adjust your player settings."
+            ],
+            "DescriptionValues": [],
+            "DetailsValues": [],
+            "LogCount": 1,
+            "LinePosition": 0,
+            "FilePath": "",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 0
+        },
+        {
+            "LogID": "32b742fc-7b9a-4cea-8861-070ff2f5ae01",
+            "Order": 1,
+            "Timestamp": 1754461261200,
+            "Stage": 1,
+            "ErrorType": 2,
+            "ErrorCode": "LP1014",
+            "Description": "We recommend running Runtime Analysis to find and remove all unused code",
+            "Details": [
+                "Navigate to the Runtime Analysis → Code tab to enable code stripping. Before uploading the playable, please make sure to have played all scenario’s of the playable in a development build to make Runtime Analysis work properly."
+            ],
+            "DescriptionValues": [],
+            "DetailsValues": [],
+            "LogCount": 1,
+            "LinePosition": 0,
+            "FilePath": "",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 0
+        },
+        {
+            "LogID": "22f115e9-165e-484c-95af-e43774ffe32a",
+            "Order": 2,
+            "Timestamp": 1754461261205,
+            "Stage": 1,
+            "ErrorType": 0,
+            "ErrorCode": "LP1027",
+            "Description": "This DOTween version is not supported",
+            "Details": [
+                "The incorrect DOTween version for this Unity version is in use, please update or downgrade to the recommended version {0} in the package manager. Go to Window → Package Manager."
+            ],
+            "DescriptionValues": [],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 0,
+            "FilePath": "",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 0
+        },
+        {
+            "LogID": "a818d546-3fec-4ed2-a270-93b9b66a0a65",
+            "Order": 3,
+            "Timestamp": 1754461261205,
+            "Stage": 1,
+            "ErrorType": 0,
+            "ErrorCode": "LP1015",
+            "Description": "This TMP version is not fully supported",
+            "Details": [
+                "The incorrect Text Mesh Pro for this Unity version is in use, please update or downgrade to the recommended version {0} in the package manager. Go to Window → Package Manager"
+            ],
+            "DescriptionValues": [],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 0,
+            "FilePath": "",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 0
+        },
+        {
+            "LogID": "fefe72f1-6e44-403e-b72f-4de656b81d88",
+            "Order": 4,
+            "Timestamp": 1754461261205,
+            "Stage": 1,
+            "ErrorType": 0,
+            "ErrorCode": "LP1032",
+            "Description": "Package(s) is not supported in Luna",
+            "Details": [
+                "Currently package(s) com.unity.timeline are not supported in Luna. We recommend you to remove it and workaround it's functionality."
+            ],
+            "DescriptionValues": [
+                "com.unity.timeline (1.7.7)"
+            ],
+            "DetailsValues": [
+                "com.unity.timeline"
+            ],
+            "LogCount": 1,
+            "LinePosition": 0,
+            "FilePath": "D:/UnityProjects/SortDash_BookshelfPlayable/Packages\\manifest.json",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 0
+        },
+        {
+            "LogID": "7a2a0952-4052-446d-b001-f5275b7ccd36",
+            "Order": 5,
+            "Timestamp": 1754461261205,
+            "Stage": 1,
+            "ErrorType": 2,
+            "ErrorCode": "LP1010",
+            "Description": "Looks like a collider was scaled, this might affect performance.",
+            "Details": [
+                "IngigoBook",
+                "YellowBook",
+                "AmethistBook",
+                "LilacBook",
+                "GreenBook",
+                "OrangeBook",
+                "RedBook",
+                "Cube",
+                "Cube (1)",
+                "Cube (2)",
+                "Cube (3)",
+                "Cube (4)",
+                "Cube (5)",
+                "Cube (6)",
+                "Cube (7)",
+                "Cube (8)",
+                "Cube (9)",
+                "Cube (10)",
+                "Cube (11)",
+                "Cube (12)",
+                "Cube (13)",
+                "Cube (14)",
+                "Cube (15)",
+                "Cube (16)",
+                "Cube (17)",
+                "Cube (18)",
+                "Cube (19)",
+                "Cube (20)",
+                "Cube (21)",
+                "Cube (22)",
+                "Cube (23)",
+                "Cube (24)",
+                "Cube (25)",
+                "Cube (26)",
+                "Cube (27)",
+                "Cube (28)",
+                "Cube (29)",
+                "Cube (30)",
+                "Cube (31)",
+                "Cube (32)",
+                "Cube (33)",
+                "Cube (34)",
+                "Cube (35)",
+                "Cube (36)",
+                "Cube (37)",
+                "Cube (38)",
+                "Cube (39)",
+                "Cube (40)",
+                "Cube (41)",
+                "Cube (42)",
+                "Cube (43)",
+                "Cube (44)",
+                "Cube (45)",
+                "Cube (46)",
+                "Cube (47)",
+                "Cube (48)",
+                "Cube (49)"
+            ],
+            "DescriptionValues": [],
+            "DetailsValues": [],
+            "LogCount": 57,
+            "LinePosition": 0,
+            "FilePath": "",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 0
+        }
+    ]
+}
