@@ -10,10 +10,11 @@ public class Drag3DWithEvents : MonoBehaviour, IPointerDownHandler, IPointerUpHa
     private float fixedZOffset;
     private Vector3 originalPosition;
     private Collider objectCollider;
+    Tween lastTween = null;
 
     [Header("Settings")]
     public float returnDuration = 1f; // duration of move to target
-    public float staggerDelay = 1f;   // delay between each child animation
+    public float staggerDelay = .3f;   // delay between each child animation
 
     private void Start()
     {
@@ -84,11 +85,11 @@ public class Drag3DWithEvents : MonoBehaviour, IPointerDownHandler, IPointerUpHa
             Debug.Log(watcher.IsFull());
             trayToUse = GameManager.Instance.secondParent;
             watcher = trayToUse.GetComponent<ChildWatcher>();
-            /*if (watcher != null && watcher.IsFull())
+            if (watcher != null && watcher.IsFull())
             {
                 Debug.Log("Both trays are full!");
                 return false;
-            }*/
+            }
         }
         else
         {
@@ -98,13 +99,22 @@ public class Drag3DWithEvents : MonoBehaviour, IPointerDownHandler, IPointerUpHa
         }
         if (transform.childCount > 10 - GameManager.Instance.bookInTray)
         {
-            
-            for (var i = 0; i < (10 - GameManager.Instance.bookInTray); i++)
+            int addIndex = 0;
+            int booksInTray1 = GameManager.Instance.bookInTray;
+            bool secondTray = false;
+            for (var i = 0; i < transform.childCount; i++)
             {
-                int targetIndex = (10 - GameManager.Instance.bookInTray) + i;
-                Debug.Log(targetIndex + "--------------------");
-                GameObject targetGO = trayToUse.transform.GetChild(targetIndex).gameObject;
-
+                int targetIndex = GameManager.Instance.bookInTray;
+                if (booksInTray1 >= 10 && !secondTray)
+                {
+                    trayToUse = GameManager.Instance.secondParent;
+                    Debug.Log("sd------------------------------sd");
+                    targetIndex = 0 + GameManager.Instance.bookInTray2;
+                    addIndex = 0;
+                    secondTray = true;
+                    GameManager.Instance.bookInTray = 0;
+                }
+                GameObject targetGO = trayToUse.transform.GetChild(targetIndex + addIndex).gameObject;
                 if (targetGO != null)
                 {
                     Transform child = transform.GetChild(i);
@@ -114,18 +124,41 @@ public class Drag3DWithEvents : MonoBehaviour, IPointerDownHandler, IPointerUpHa
                          .SetEase(Ease.OutExpo)
                          .SetDelay(delay);
 
-                    child.DORotateQuaternion(targetGO.transform.rotation, 1f)
-                         .SetEase(Ease.OutExpo)
-                         .SetDelay(delay)
-                         .OnComplete(() =>
-                         {
-                             child.SetParent(targetGO.transform, true);
-                             this.transform.GetComponent<BoxCollider>().enabled = false;
-                         });
+                    // Keep track of the *last* rotation tween
+                    lastTween = child.DORotateQuaternion(targetGO.transform.rotation, 1f)
+                                     .SetEase(Ease.OutExpo)
+                                     .SetDelay(delay)
+                                     .OnComplete(() =>
+                                     {
+                                         child.SetParent(targetGO.transform, true);
+                                         this.transform.GetComponent<BoxCollider>().enabled = false;
+                                     });
+
                     targetGO.GetComponent<ChildSlot>().isOccupied = true;
                 }
-                GameManager.Instance.bookInTray++;
+                addIndex++;
+                booksInTray1++;
+                if (secondTray)
+                {
+                    GameManager.Instance.bookInTray2++;
+                }
             }
+
+            // When the last tween finishes
+            if (lastTween != null)
+            {
+                lastTween.OnComplete(() =>
+                {
+                    Debug.Log(" All tweens finished!");
+                    GameManager.Instance.level++;
+                    GameManager.Instance.bookInTray = 0;
+                    trayToUse = GameManager.Instance.Tray.transform.GetChild(GameManager.Instance.level).gameObject;
+                    // Place your final logic here
+                });
+            }
+
+            GameManager.Instance.bookInTray += transform.childCount;
+            return true;
         }
         // Loop through tray slots
         for (int slotIndex = 0; slotIndex <= trayToUse.transform.childCount - transform.childCount; slotIndex++)

@@ -21,7 +21,9 @@ public class GameManager : MonoBehaviour
     public int delay = 1;
     public DropZone zone;
     public int bookInTray;
+    public int bookInTray2;
     public bool notFull;
+    public bool bookDividePlace = false;
 
     public enum GameState { MainMenu, Playing, Paused, GameOver }
     public GameState CurrentState { get; private set; }
